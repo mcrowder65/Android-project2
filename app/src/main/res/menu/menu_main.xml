@@ -4,12 +4,15 @@
         android:id="@+id/miProfile"
         android:icon="@drawable/wrench"
         app:showAsAction="ifRoom"
+        android:onClick="wrenchClick"
+
         android:title="Wrench">
     </item>
     <item
         android:id="@+id/miCompose"
         android:icon="@drawable/wifi"
         app:showAsAction="ifRoom"
+        android:onClick="wifiClick"
         android:title="Wifi">
     </item>
 </menu>
