@@ -2,17 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/miProfile"
-        android:icon="@drawable/wrench"
+        android:icon="@drawable/ic_snowflake_48"
         app:showAsAction="ifRoom"
-        android:onClick="wrenchClick"
+        android:onClick="movingToSnowman"
 
-        android:title="Wrench">
+        android:title="snowman">
     </item>
     <item
         android:id="@+id/miCompose"
         android:icon="@drawable/wifi"
         app:showAsAction="ifRoom"
-        android:onClick="wifiClick"
-        android:title="Wifi">
+        android:onClick="movingToList"
+        android:title="list">
     </item>
 </menu>

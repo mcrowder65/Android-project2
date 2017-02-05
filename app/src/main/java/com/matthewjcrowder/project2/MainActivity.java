@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity implements
         Snackbar mySnackBar = Snackbar.make(findViewById(R.id.myCoordinatorLayout), message, Snackbar.LENGTH_SHORT);
         mySnackBar.show();
     }
-    public void wrenchClick(MenuItem item) {
+    public void movingToSnowman(MenuItem item) {
 
-        makeSnackBar("wrench menu button clicked!");
+        makeSnackBar("snowman button clicked!");
     }
 
-    public void wifiClick(MenuItem item) {
-        makeSnackBar("wifi menu button clicked!");
+    public void movingToList(MenuItem item) {
+        makeSnackBar("list button clicked!");
     }
 
     @Override
