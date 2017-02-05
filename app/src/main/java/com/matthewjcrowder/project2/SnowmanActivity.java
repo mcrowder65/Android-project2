@@ -14,12 +14,13 @@ import android.view.MotionEvent;
 public class SnowmanActivity extends AppCompatActivity implements GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener {
     private GestureDetectorCompat mDetector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_snowman);// Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        // Sets the Toolbar to act as the ActionBar for this Activity window.
+        // Sets the Abstract to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
 
@@ -48,13 +49,13 @@ public class SnowmanActivity extends AppCompatActivity implements GestureDetecto
     }
 
     public void movingToSnowman(MenuItem item) {
-
         makeSnackBar("You are already on the snowman");
-
     }
 
     public void movingToList(MenuItem item) {
         makeSnackBar("list button clicked!");
+        Intent i = new Intent(getApplicationContext(), ListActivity.class);
+        startActivity(i);
     }
 
     @Override

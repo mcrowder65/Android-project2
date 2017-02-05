@@ -28,7 +28,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="70dp"
             android:background="#434d23"
-            android:text="Snowman activity!"
+            android:text="List activity!"
             android:textColor="#a5c63b" />
 
     </LinearLayout>
