@@ -10,7 +10,7 @@
     </item>
     <item
         android:id="@+id/miCompose"
-        android:icon="@drawable/wifi"
+        android:icon="@drawable/list"
         app:showAsAction="ifRoom"
         android:onClick="movingToList"
         android:title="list">
