@@ -52,7 +52,7 @@ public class ListActivity extends AppCompatActivity implements GestureDetector.O
 // you want to use the same images.
     private void initializeData() {
         persons = new ArrayList<>();
-        for(int i = 1; i < 1000; i++) {
+        for(int i = 1; i < 1001; i++) {
             persons.add(new Data(Integer.toString(i) + " hello"));
         }
     }
