@@ -5,16 +5,23 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ListActivity extends AppCompatActivity implements GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener {
     private GestureDetectorCompat mDetector;
 
+    private RecyclerView mRecyclerView;
+    private LinearLayoutManager mLinearLayoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +33,29 @@ public class ListActivity extends AppCompatActivity implements GestureDetector.O
 
         mDetector = new GestureDetectorCompat(this, this);
         mDetector.setOnDoubleTapListener(this);
+
+        RecyclerView rv = (RecyclerView)findViewById(R.id.recyclerView);
+        rv.setHasFixedSize(true);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        rv.setLayoutManager(llm);
+        initializeData();
+        RVAdapter adapter = new RVAdapter(persons);
+        rv.setAdapter(adapter);
     }
 
+
+
+    private List<Data> persons;
+
+    // This method creates an ArrayList that has three Data objects
+// Checkout the project associated with this tutorial on Github if
+// you want to use the same images.
+    private void initializeData() {
+        persons = new ArrayList<>();
+        for(int i = 0; i < 1000; i++) {
+            persons.add(new Data(Integer.toString(i), "hello"));
+        }
+    }
     // Menu icons are inflated just as they were with actionbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
