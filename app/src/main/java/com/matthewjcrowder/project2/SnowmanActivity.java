@@ -6,10 +6,12 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 
 public class SnowmanActivity extends AppCompatActivity implements GestureDetector.OnGestureListener,
         GestureDetector.OnDoubleTapListener {
@@ -26,6 +28,15 @@ public class SnowmanActivity extends AppCompatActivity implements GestureDetecto
 
         mDetector = new GestureDetectorCompat(this, this);
         mDetector.setOnDoubleTapListener(this);
+        SnowmanView snowmanView = (SnowmanView) findViewById(R.id.SnowmanView);
+        snowmanView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                SnowmanView local = (SnowmanView) v;
+                local.initSnowman();
+                local.invalidate();
+            }
+
+        });
     }
 
     // Menu icons are inflated just as they were with actionbar
