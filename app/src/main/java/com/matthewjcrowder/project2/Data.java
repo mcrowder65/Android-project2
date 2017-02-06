@@ -6,7 +6,6 @@ package com.matthewjcrowder.project2;
 
 public class Data {
         String name;
-        String age;
 
         Data(String name) {
             this.name = name;
