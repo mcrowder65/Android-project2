@@ -18,18 +18,9 @@
             layout="@layout/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <!-- Rest of content for the activity -->
-        <Button
-            android:id="@+id/btn"
+        <com.matthewjcrowder.project2.SnowmanView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:onClick="onClick"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
-            android:background="#434d23"
-            android:text="Snowman activity!"
-            android:textColor="#a5c63b" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
