@@ -8,8 +8,7 @@ public class Data {
         String name;
         String age;
 
-        Data(String name, String age) {
+        Data(String name) {
             this.name = name;
-            this.age = age;
         }
 }

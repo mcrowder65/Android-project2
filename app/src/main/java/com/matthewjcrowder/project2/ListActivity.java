@@ -52,8 +52,8 @@ public class ListActivity extends AppCompatActivity implements GestureDetector.O
 // you want to use the same images.
     private void initializeData() {
         persons = new ArrayList<>();
-        for(int i = 0; i < 1000; i++) {
-            persons.add(new Data(Integer.toString(i), "hello"));
+        for(int i = 1; i < 1000; i++) {
+            persons.add(new Data(Integer.toString(i) + " hello"));
         }
     }
     // Menu icons are inflated just as they were with actionbar
